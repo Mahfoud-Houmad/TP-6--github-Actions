@@ -21,3 +21,6 @@ jobs:
         run: |
           echo "OS: ${{ runner.os }}"
           echo "Architecture: ${{ runner.arch }}"
+      - name: Print debug information
+        if: ${{ inputs.debug }}
+        run: echo "Debug mode enabled for ${{ inputs.environment }}"
